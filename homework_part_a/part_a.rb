@@ -8,11 +8,11 @@ class Student
   end
 
 def get_name
-  return name = @name
+  return input_name = @name
 end
 
 def get_cohort
-  return cohort = @cohort
+  return input_cohort = @cohort
 end
 
 def set_name(new_name)
@@ -24,11 +24,11 @@ def set_cohort(new_cohort)
 end
 
 def get_skill
-  return skill = @skills
+  return input_skill = @skills
 end
 
 def get_favourite_language
-  favourite_language = @favourite_language
+  input_favourite_language = @favourite_language
   return "I love #{favourite_language}"
 end
 end

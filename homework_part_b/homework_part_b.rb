@@ -17,23 +17,9 @@ def player_checker(player_name)
   players.include? player_name
 end
 
-
-
 def add_points(result)
   @points += 1 if result == "win"
   @points -= 1 if result == "lose"
 end
-  #
-  # @points == 0
-  # result = ""
-  # @points += 1 if result == "win"
-  # @points -= 1 if result == "lose"
-  # end
-  #
-  # result = {
-  #   "win" => 1,
-  #   "lose" => -1
-  # }
-  #
-  # @points = result 
+
 end
