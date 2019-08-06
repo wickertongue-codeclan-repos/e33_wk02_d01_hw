@@ -47,4 +47,27 @@ class TestLibrary < MiniTest::Test
     actual = library.get_rental_info_by_book_title("Lord of the Rings")
     assert_equal(expected, actual)
   end
+
+  def test_add_book_to_inventory_by_book_title
+    library = Library.new(@inventory, @inventory[0][:title], @inventory[0][:rental_details], @inventory[0][:student_name], @inventory[0][:date])
+
+    library.add_book_to_inventory_by_book_title("The Left Hand of Darkness")
+
+    expected = 3
+    actual = @inventory.length
+    assert_equal(expected, actual)
+  end
+
+  def test_change_rental_details
+    library = Library.new(@inventory, @inventory[0][:title], @inventory[0][:rental_details], @inventory[0][:student_name], @inventory[0][:date])
+
+    library.change_rental_details("Pale Fire", "Melina", "02/05/16")
+
+    expected = "07/07/17"
+    actual = @inventory[0][:date]
+    assert_equal(expected, actual)
+
+  end
+
+
 end
